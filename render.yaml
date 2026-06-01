@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: woldt-metrics
+    runtime: node
+    plan: starter            # 'free' works for testing but idles out; 'starter' (~$7/mo) stays always-on for SSE
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /healthz
+    envVars:
+      - key: DATA_SOURCE
+        value: live
+      - key: ALLOWED_ORIGIN
+        sync: false
+      - key: CAL_WEBHOOK_SECRET
+        sync: false
+      - key: HUBSPOT_TOKEN
+        sync: false
+      - key: HUBSPOT_ENGAGEMENT_STAGE
+        sync: false
+      - key: PLAUSIBLE_API_KEY
+        sync: false
+      - key: PLAUSIBLE_SITE_ID
+        sync: false

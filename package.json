@@ -1,0 +1,20 @@
+{
+  "name": "woldt-metrics-server",
+  "version": "3.1.0",
+  "description": "Practice Pulse SSE aggregator for Woldt Consulting: live Cal.com (discovery calls) + HubSpot CRM (leads, engagements) + Plausible (sessions).",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "start:live": "DATA_SOURCE=live node server.js",
+    "start:cal": "DATA_SOURCE=cal node server.js",
+    "start:sim": "DATA_SOURCE=simulated node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
