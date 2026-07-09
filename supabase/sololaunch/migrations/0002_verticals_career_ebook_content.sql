@@ -1,0 +1,4 @@
+-- APPLIED 2026-06-27. Adds 3 B2C verticals (career, ebook Model B, content), each with
+-- 5 artifact_kinds + 5 active claude-sonnet-5 prompt templates. Idempotent.
+-- LS variant IDs left as REPLACE_WITH_LS_VARIANT_ID placeholders (wire checkout in LS).
+-- Full template bodies in supabase/sololaunch/DRAFT_verticals_3_4_5.md.
