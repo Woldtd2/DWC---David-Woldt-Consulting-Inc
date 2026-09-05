@@ -1,0 +1,36 @@
+# Root .gitignore — this repo had NONE before 5 Sep 2026.
+# The nested Build/dwci-platform-foundation/.gitignore already protects that
+# folder's .env; these rules cover the repo root and anything added later.
+
+# Secrets — never commit. .env.example (placeholders only) is kept.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+secrets.json
+
+# Dependencies
+node_modules/
+
+# Build OUTPUT only.
+# NOTE: a bare "build/" rule is NOT used here on purpose. core.ignorecase is
+# true on this machine, so "build/" also matches "Build/" — the folder that
+# holds dwci-platform-foundation, which is SOURCE, not output. That rule
+# silently hid 63 real files when first written on 5 Sep 2026.
+/dist/
+.cache/
+*.tsbuildinfo
+
+# OS and editor noise (this repo lives under OneDrive)
+desktop.ini
+Thumbs.db
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Logs
+*.log
+npm-debug.log*

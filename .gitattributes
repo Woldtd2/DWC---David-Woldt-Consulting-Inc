@@ -1,0 +1,16 @@
+# Normalise line endings in the repo; check out native on each platform.
+# Added 5 Sep 2026 after CRLF churn produced 21,540 phantom line changes
+# across 8 files with zero content change.
+* text=auto
+
+# Binary — never normalise, never diff as text.
+*.png binary
+*.jpg binary
+*.gif binary
+*.pdf binary
+*.docx binary
+*.xlsx binary
+*.pptx binary
+*.zip binary
+*.gz binary
+*.dump binary
