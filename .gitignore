@@ -34,3 +34,16 @@ Thumbs.db
 # Logs
 *.log
 npm-debug.log*
+
+# ---------------------------------------------------------------------------
+# CP-113 — THIS REPOSITORY IS PUBLIC (.repo-visibility = public, verified 2 Sep
+# 2026: it loads to an unauthenticated fetch). The folders below are INTERNAL
+# analysis and are excluded so that a stray `git add .` cannot publish them by
+# adjacency -- the exact failure CP-113 exists to prevent.
+#
+# These are NOT ignored because they are junk. They are business-critical and
+# belong in a PRIVATE repository. Excluding them here is a stopgap, not the fix.
+# ---------------------------------------------------------------------------
+Strategy & Documentation/
+Skills & Certifications/
+*_Plan_2026-*.xlsx

@@ -1,0 +1,8 @@
+# CP-113 allowlist. EVERY ENTRY REQUIRES A REASON — an exemption nobody can
+# review is a hole with a comment character in front of it.
+#
+# One path per line, then a # reason.
+
+.gitignore              # the guard's own config; cites CP-113 and the DR-72 rule in comments, which is why it trips the WBS-reference signal. No internal analysis -- it is the thing that KEEPS internal analysis out.
+.repo-visibility        # the visibility marker itself; one word, no content.
+.internal-content-allow # this file.
